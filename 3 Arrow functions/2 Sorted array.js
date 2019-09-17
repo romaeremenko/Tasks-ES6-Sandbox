@@ -16,7 +16,7 @@ class SortedArray {
         this.content = []
     }
 
-    fddd(elt) {
+    cb(elt) {
         return (er, t, j) => {
             if (this.compare(elt, er) < 0) return t;
         }
@@ -27,8 +27,8 @@ class SortedArray {
     }
 
     insert(elt) {
-        var k = this.fddd(elt);
-        return this.content.splice(this.findPos(k), 0, elt);
+        var func = this.cb(elt);
+        return this.content.splice(this.findPos(func), 0, elt);
     }
 }
 
