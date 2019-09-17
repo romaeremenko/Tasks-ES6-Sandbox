@@ -17,8 +17,8 @@ class SortedArray {
     }
 
     cb(elt) {
-        return (er, t, j) => {
-            if (this.compare(elt, er) < 0) return t;
+        return (element, index, array) => {
+            if (this.compare(elt, element) < 0) return index;
         }
     }
 
